@@ -732,3 +732,29 @@ footer.dark .follow .social li a i:hover:before {
   }
 }
 /* Media queries */
+
+.badge-bronze, .badge-silver, .badge-gold {
+  padding-left: 15px;
+  position: relative;
+}
+.badge-bronze::before, .badge-silver::before, .badge-gold::before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 9px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+
+.badge-bronze::before {
+  background-color: #d1a684;
+}
+
+.badge-silver::before {
+  background-color: #b4b8bc;
+}
+
+.badge-gold::before {
+  background-color: #ffcc01;
+}
