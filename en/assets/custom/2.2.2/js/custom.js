@@ -88,31 +88,31 @@
         /** Ajax page load settings **/
         (function () {
 
-            if (ajaxLoadingEnabled()) {
-                $(document).pjax('a', '.content-wrap', {fragment: '.content-wrap', scrollTo: false});
+            // if (ajaxLoadingEnabled()) {
+            //     $(document).pjax('a', '.content-wrap', {fragment: '.content-wrap', scrollTo: false});
 
-                $(document).on('pjax:click', function (event) {
-                    if (!ajaxLoadingEnabled()) {
-                        event.preventDefault();
-                        window.location.reload();
-                    }
-                });
+            //     $(document).on('pjax:click', function (event) {
+            //         if (!ajaxLoadingEnabled()) {
+            //             event.preventDefault();
+            //             window.location.reload();
+            //         }
+            //     });
 
-                $(document).on('pjax:end', function () {
-                    document.activeElement && document.activeElement.blur();
-                    sectionsScripts();
-                    // Sections Animation
-                    if (scrollRevealEnabled()) {
-                        scrollReveal(scrollRevealItems.content);
-                    }
-                });
+            //     $(document).on('pjax:end', function () {
+            //         document.activeElement && document.activeElement.blur();
+            //         sectionsScripts();
+            //         // Sections Animation
+            //         if (scrollRevealEnabled()) {
+            //             scrollReveal(scrollRevealItems.content);
+            //         }
+            //     });
 
-                $(document).on('pjax:beforeReplace', function () {
-                    $('.content-wrap')
-                        .velocity({ opacity: 0 }, { duration: 0 })
-                        .velocity({ opacity: 1 }, { duration: 300, easing: [ 0, 1, 1, 0 ] });
-                });
-            }
+            //     $(document).on('pjax:beforeReplace', function () {
+            //         $('.content-wrap')
+            //             .velocity({ opacity: 0 }, { duration: 0 })
+            //             .velocity({ opacity: 1 }, { duration: 300, easing: [ 0, 1, 1, 0 ] });
+            //     });
+            // }
 
         })();
     });
